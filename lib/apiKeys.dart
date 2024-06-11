@@ -1,0 +1,1 @@
+//Open AI KEY ->// const OpenAIapiKey =// 'sk-proj-// 21Pbj9ujiUw0VPULjKk9T3BlbkFJvBuTtRttlniaFf1rdvrE';const GeminiAIapiKey = 'AIzaSyDi8kMxWkUCepViDMK2MmMR-yvmr28-rMo';
