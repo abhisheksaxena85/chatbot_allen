@@ -1,9 +1,16 @@
-import 'package:chatbot_allen/color_pallet.dart';
-import 'package:chatbot_allen/home_page.dart';
+import 'package:chatbot_allen/constants/color_pallet.dart';
+import 'package:chatbot_allen/speechProvider/spech_text_provider.dart';
+import 'package:chatbot_allen/view/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context)=> speechTextProvider(),
+      child: MyApp(),
+    )
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -21,8 +28,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Pallet.whiteColor,
         )
       ),
-
-      home:HomePage(),
+      home: HomePage()
     );
   }
 }
