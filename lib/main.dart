@@ -1,10 +1,15 @@
+import 'package:chatbot_allen/New%20Version/dashboard_screen.dart';
+import 'package:chatbot_allen/constants/apiKeys.dart';
 import 'package:chatbot_allen/constants/color_pallet.dart';
 import 'package:chatbot_allen/speechProvider/spech_text_provider.dart';
-import 'package:chatbot_allen/view/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gemini/flutter_gemini.dart';
 
 void main() {
+
+  Gemini.init(apiKey: GeminiAIapiKey);
+
   runApp(
     ChangeNotifierProvider(
       create: (context)=> speechTextProvider(),
@@ -28,7 +33,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Pallet.whiteColor,
         )
       ),
-      home: HomePage()
+      home: const DashboardScreen()
     );
   }
 }
